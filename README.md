@@ -7,4 +7,7 @@ Whiteboard Functionality: Facilitates collaborative whiteboarding through gestur
 Handwriting to Text Conversion: Converts written handwriting into digital text using Pytesseract, with the model trained using transfer learning on a labeled dataset.
 The system's real-time hand tracking and gesture recognition capabilities offer an intuitive user experience, making it useful in various applications such as for handicapped individuals, school or office presentations, medical sectors, and any environment requiring a touch-free interaction.
 
-<img width="671" alt="1" src="https://github.com/user-attachments/assets/d6c5cd12-567a-4243-9ced-d7e05ba1254c">
+![image](https://github.com/user-attachments/assets/59904739-38e1-4c64-b9f1-32c654fbdda3)
+
+https://github.com/user-attachments/assets/b7679d84-bfb5-4f75-8489-3585b59c9bed
+
