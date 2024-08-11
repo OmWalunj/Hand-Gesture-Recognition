@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gesture Recognition</title>
+  <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
 
+  header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  main {
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .control-section {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .control-section:hover {
+    
+    transform: scale(1.05);
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  p {
+    color: #666;
+  }
+
+  footer p{
+      color: #fff;
+  }
+
+  footer {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gesture Recognition System</h1>
+  </header>
+
+  <main>
+    <div class="control-section" id="mouseControl">
+      <h2>Mouse Control</h2>
+      <p>Your gestures can control the mouse movements. Experience seamless navigation and interaction.</p>
+    </div>
+
+    <div class="control-section" id="pptControl">
+      <h2>PPT Control</h2>
+      <p>Navigate through your PowerPoint presentations with ease using intuitive gestures.</p>
+    </div>
+
+    <div class="control-section" id="mediaControl">
+      <h2>Media Player Control</h2>
+      <p>Play, pause, and control media playback effortlessly with gestures tailored for media interaction.</p>
+    </div>
+
+    <div class="control-section" id="whiteboard">
+      <h2>Whiteboard</h2>
+      <p>You can use whiteboard to create content using gestures. It will also convert handwriting to text.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Gesture Recognition System</p>
+  </footer>
+
+  <script>
+    document.getElementById('mouseControl').addEventListener('click', function() {
+        fetch('/runcode?script=mouse_control.py').then(response => {
+            if (response.ok) {
+                print('Mouse control executed successfully!');
+            } else {
+                alert('Error executing Mouse control!');
+            }
+        });
+    });
+
+    document.getElementById('pptControl').addEventListener('click', function() {
+        fetch('/runcode?script=ppt.py').then(response => {
+            if (response.ok) {
+                print('Whiteboard script executed successfully!');
+            } else {
+                alert('Error executing Whiteboard script!');
+            }
+        });
+    });
+
+    document.getElementById('mediaControl').addEventListener('click', function() {
+        fetch('/runcode?script=Media.py').then(response => {
+            if (response.ok) {
+                print('Media executed successfully!');
+            } else {
+                alert('Error executing Media!');
+            }
+        });
+    });
+
+    document.getElementById('whiteboard').addEventListener('click', function() {
+        fetch('/runcode?script=handwritingrecog.py').then(response => {
+            if (response.ok) {
+                print('Whiteboard script executed successfully!');
+            } else {
+                alert('Error executing Whiteboard script!');
+            }
+        });
+    });
+</script>
+</body>
+</html>
